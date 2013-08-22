@@ -1,0 +1,35 @@
+<h1>Listing drunkards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Birthday</th>
+      <th>Email</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drunkards.each do |drunkard| %>
+      <tr>
+        <td><%= drunkard.name %></td>
+        <td><%= drunkard.surname %></td>
+        <td><%= drunkard.birthday %></td>
+        <td><%= drunkard.email %></td>
+        <td><%= drunkard.comment %></td>
+        <td><%= link_to 'Show', drunkard %></td>
+        <td><%= link_to 'Edit', edit_drunkard_path(drunkard) %></td>
+        <td><%= link_to 'Destroy', drunkard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drunkard', new_drunkard_path, class: "small button" %>

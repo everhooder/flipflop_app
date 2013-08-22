@@ -1,0 +1,78 @@
+<%= form_for(@drunkard) do |f| %>
+  <% if @drunkard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drunkard.errors.count, "error") %> prohibited this drunkard from being saved:</h2>
+
+      <ul>
+      <% @drunkard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<form>
+<fieldset>
+  <legend>Give us some info here, please:</legend>
+  <div class="row collapse">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="left-label" class="left inline"> <%= f.label :name, class: "left  inline" %> </label>
+      </div>
+      <br>
+      <div class="small-9 columns"><%= f.text_field :name %></div>
+    </div>
+  </div>
+
+
+  <div class="row collapse">
+      <div class="small-8">
+        <div class="small-3 columns"> 
+          <label for="left-label" class="left inline"><%= f.label :surname, class: "right inline" %> </label>
+        </div>
+        <br>
+        <div class="small-9 columns"><%= f.text_field :surname %> </div>
+      </div>
+  </div>
+
+
+  <div class="row collapse">
+      <div class="small-8">
+        <div class="small-3 columns"> 
+          <label for="left-label" class="left inline"><%= f.label :birthday, class: "right inline" %></label>
+        </div>
+        <br>
+        <div class="small-3 columns"><%= f.date_select :birthday %></div>
+      </div>
+  </div>
+
+
+  <div class="row collapse">
+      <div class="small-8">
+        <div class="small-3 columns"> 
+          <label for="left-label" class="left inline"><%= f.label :email, class: "right inline" %></label>
+        </div>
+        <br>
+        <div class="small-9 columns"><%= f.text_field :email %></div>
+      </div>
+  </div>
+
+
+ <div class="row collapse">
+      <div class="small-8">
+        <div class="small-3 columns"> 
+        <label for="left-label" class="left inline"><%= f.label :comment, class: "right inline" %></label>
+        </div>
+          <br>
+        <div class="small-9 columns"><%= f.text_area :comment %></div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <div class="small-button">
+      <div class="small-8 small-offset-3 colimns"><%= f.submit %></div>
+    </div>
+  </div>
+</fieldset>
+</form>
+<% end %>

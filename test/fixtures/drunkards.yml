@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  surname: MyString
+  birthday: 2013-08-22
+  email: MyString
+  comment: MyText
+
+two:
+  name: MyString
+  surname: MyString
+  birthday: 2013-08-22
+  email: MyString
+  comment: MyText

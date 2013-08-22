@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @drunkard.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @drunkard.surname %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @drunkard.birthday %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @drunkard.email %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @drunkard.comment %>
+</p>
+
+<%= link_to 'Edit', edit_drunkard_path(@drunkard) %> |
+<%= link_to 'Back', drunkards_path %>
