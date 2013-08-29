@@ -42,7 +42,7 @@
           <label for="left-label" class="left inline"><%= f.label :birthday, class: "right inline" %></label>
         </div>
         <br>
-        <div class="small-3 columns"><%= f.date_select :birthday %></div>
+        <div class="small-3 columns"><%= f.date_select :birthday, :start_year => 1920, :end_year => 1995 %></div>
       </div>
   </div>
 
@@ -76,3 +76,5 @@
 </fieldset>
 </form>
 <% end %>
+
+
